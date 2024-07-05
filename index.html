@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>next Photo studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+     
+    <!--header-->
+    <header>
+        <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo" class="next-logo">
+        </div>
+
+        <div class="menu">
+            <i class=' open-btn bx bx-menu' onclick="toggleMenu()"></i>
+            <i class=' close-btn bx bx-x' onclick="toggleMenu()"></i>
+        </div>
+        
+            <ul class="menu-list">
+                   <li><a href="#home">Home</a></li>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#gallery">Gallery</a></li>
+                   <li><a href="#team">Team's</a></li>
+                   <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+    </header>
+    <!--Hero section-->
+    <section class="home" id="home">
+        <div class="section-container"> 
+        <div class="containe-home">
+        <div class="text hidden">
+            <h2 class="myh2">Next <span class="pic-span">Pictures</span></h2>
+            <p class="text-p">Bringing your best moments to life through <br> the art of photography.</p>
+            <div class="buttons">
+            <button class="mybutton">Book Now</button>
+        </div>
+        </div>
+        <div class="pictures hidden2">
+            <div class="camera-container">
+                <img src="Img/lence3removebgpreview.png" alt="camera" class="camera-pic">
+            </div>
+        </div>
+       </div>
+       <div class="battery hidden"> 
+        <img src="Img/cameracapremovebgpreview.png" alt="" class="battery-pic">
+     </div> 
+    </div>
+    </section>
+
+    <!--about-->
+     <section class="about" id="about">
+        <div class="about-container">
+            <div class="studio-img hidden">
+                <img src="Img/studio(2).jpg" alt="" class="studio-pic">
+            </div>
+            <div class="about-text hidden2">
+                <h3 class="myh3">ABOUT US</h3>
+                <p class="about-next">At Next Photography, we believe that every moment <br>is worth capturing, every smile has a story,<br> and  every image is a piece of art. <br><br> Our studio is a sanctuary for creativity <br>and a space where memories <br> are preserved with care and precision<br><br>
+                    
+                    Founded in 2020, Next was born out of a passion <br>for storytelling through the lens. <br>Our founder, Amanual beyene envisioned a <br>place where clients could feel comfortable and confident. <br> <br>
+                    
+                    We offer a wide range of photography services tailored to <br>meet your unique needs. <br>Whether it's a wedding, birthday, corporate event and we even do video.</p>
+            </div>
+        </div>
+        <div class="drone hidden3" style="display: none;">
+            <img src="Img/dron.jpg" alt="" class="drone-img">
+        </div>
+    </div>
+     </section>
+
+     <!--GALLARY-->
+     <section class="gallery" id="gallery">
+        <div class="section-container">
+        <div class="gallery-container">
+            <h3 class="my33">OUR PHOTO GALLERY</h3>
+            <div class="row">
+                <div class="gallery-filter">
+                    <span class="filter-item active" data-filter="all">All</span>
+                    <span class="filter-item" data-filter="wedding">Wedding</span>
+                    <span class="filter-item" data-filter="birthday">Birthday</span>
+                </div>
+            </div>
+            <divc class="gallery-row">
+
+                <div class="gallery-item wedding hidden">
+                        <img src="Img/leykun1.jpg" alt="wedding" class="photo">
+                </div>
+
+                <div class="gallery-item wedding hidden">
+                        <img src="Img/wedding2.jpg" alt="wedding" class="photo">
+                </div>
+
+                <div class="gallery-item hidden2">
+                        <img src="Img/gratuation1.jpg" class="photo">
+                </div>
+
+                <div class="gallery-item birthday hidden2">
+                        <img src="Img/birthday5.jpg" alt="birthday" class="photo">
+                </div>
+
+                <div class="gallery-item wedding hidden">
+                        <img src="Img/wedding3.jpg" class="photo">
+                </div>
+
+                <div class="gallery-item birthday hidden">
+                        <img src="Img/birthday3.jpg" class="photo">
+                </div>
+
+                <div class="gallery-item wedding hidden2">
+                        <img src="Img/wedding1.jpg" class="photo">
+                </div>
+                
+                <div class="gallery-item birthday hidden2">
+                        <img src="Img/birthday1.jpg" class="photo">
+                </div>
+            </div>
+        </div>
+    </div>
+     </section>
+
+     <!--Team's-->
+     <section class="team" id="team">
+        <div class="section-container">
+        <h2 class="our-team">OUR TEAM'S</h2>
+        <div class="team-container">
+            
+            <div class="team-img hidden">
+                <img src="Img/amani.jpg" alt="amani" class="member-photo">
+            <div class="team-desc">
+                <h4 class="myh44">Amanual Beyene</h4>
+                <p class="profestion">Bussines Owner / Photographer</p>
+            </div>
+            </div>
+
+            <div class="team-img hidden">
+                <img src="Img/tsion.jpg" alt="tsion" class="member-photo">
+            <div class="team-desc">
+                <h4 class="myh44">Tsion Endrias</h4>
+                <p class="profestion">Photographer</p>
+            </div>
+            </div>
+
+            <div class="team-img hidden">
+                <img src="Img/moke.jpg" alt="tsion" class="member-photo">
+            <div class="team-desc">
+                <h4 class="myh44">Mekonnen Kebede</h4>
+                <p class="profestion">Photographer</p>
+            </div>
+            </div>
+        </div>
+      </div>
+     </section>
+
+     <!--contact-->
+     <section class="contact" id="contact">
+        <div class="contact-container-1">
+            <h2 class="contact-us">CONTACT US</h2>
+        <div class="containe-all-info">
+        <div class="contact-container hidden">
+             <div class="location">
+                <i class='bx bxs-map'></i>
+                 <p class="address">Our Address</p>
+                 <p class="city-name">Hawassa, Besides Fura Elementary School</p>
+             </div>
+             <div class="phone">
+                <i class='bx bxs-phone-call'></i>
+                <p class="call-us">Call Us</p>
+                <p class="phone-number">+251 966761575 <br> +251 945009857</p>
+             </div>
+             <div class="email">
+                <i class='bx bx-envelope'></i>
+                <p class="email-us">Email Us</p>
+                <p class="our-email">nextpic223@gmail.com</p>
+             </div>
+             <div class="message-us">
+                <input type="text" placeholder="Enter Your Name">
+                <input type="text" placeholder="Enter Your Email">
+                <textarea name="message" id="message" placeholder="Write Your Message"></textarea>
+                <button class="send-message">Send Message</button>
+             </div>
+        </div>
+        <div class="map hidden2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.8399964100017!2d38.48076207355054!3d7.02808571709705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b1452f26cf3247%3A0xff58001f612e485f!2sNext%20pictures!5e0!3m2!1sen!2set!4v1718109920982!5m2!1sen!2set" width="620" height="440" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+        </div>
+        </div>
+     </section>
+
+     <!--footer-->
+     <footer class="footer">
+        <div class="section-container">
+        <div class="footer-container">
+            <div class="next-logo">
+                <h4 class="next-text">NEXT <span class="next-span">Pictures</span></h4>
+                <p class="next-desc">Bringing your best moments to life through <br> the art of photography.</p>
+            </div>
+            <div class="usefull-links">
+                <h4 class="usefull-links-text">Usefull Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#team">Team's</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4 class="contact-f-text">Contact</h4>
+                <div class="footer-map">
+                    <i class='bx bxs-map'></i>
+                    <p class="f-map-text">Hawassa, Ethiopia</p>
+                </div>
+                    <div class="contact-phone">
+                        <i class='bx bxs-phone-call'></i>
+                        <p class="amanis-phone">+251 966761575</p>
+                    </div>
+                    <div class="work-time">
+                        <i class='bx bx-time'></i>
+                        <p class="work-time-text">Mon-Sun : 8:00 AM - 9:00 PM</p>
+                    </div>
+            </div>
+            <div class="social-links">
+                <h4 class="social-links-text">Follow</h4>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+    </div>
+     </footer>
+     
+    <script src="app.js"></script>
+</body>
+</html>

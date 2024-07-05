@@ -1,0 +1,982 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    scrollbar-color: var(--secondary-color) #fff;
+    scrollbar-width: thin;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Bg-color--: rgb(231, 231, 231);
+    --secondary-color: rgb(253, 165, 0);
+    --black-color: rgb(27, 26, 26);
+    --site-max-width: 1300px;
+}
+ body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.section-container{
+    width: var(--site-max-width);
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    background-color: rgba(59, 59, 59, 0.993);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+.logo{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.logo .next-logo{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+nav{
+    width: var(--site-max-width);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li a{
+    color: white;
+    font-weight: 500;
+}
+nav ul li a:hover{
+   border-bottom: 3px solid var(--secondary-color);
+}
+nav ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+nav ul li{
+    padding: 12px 32px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+nav .list-item li a:hover{
+    border-bottom: 2px solid var(--secondary-color);
+}
+.menu .open-btn, .menu .close-btn{
+    font-size: 33px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    right: -50px;
+    display: none;
+}
+
+.home{
+    margin-top: 70px;
+    background-color: rgba(59, 59, 59, 0.993);
+    height: 100vh;
+    overflow: hidden;
+}
+.containe-home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: var(--site-max-width);
+    height: 90vh;
+    gap: 20%;
+    position: relative;
+}
+.containe-home::before{
+    content: '';
+    position: absolute;
+    width: 230px;
+    height: 110.9vh;
+    background-color: var(--secondary-color);
+    top: 0;
+    right: 16%;
+}
+.camera-container{
+    position: relative;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    left: -120px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.514);
+}
+.camera-container .camera-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    border-radius: 50%;
+    animation-name: camera-container;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes camera-container {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(80deg);
+    }
+    50%{
+        transform: rotate(160deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.battery{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    top: -6rem;
+    right: -20%;
+}
+.battery .battery-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.myh2{
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+}
+.pic-span{
+    font-weight: 520;
+    color: var(--secondary-color);
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.text-p{
+    color: white;
+    font-size: 20px;
+    font-weight: 470;
+    margin-top: 5px;
+}
+.mybutton{
+    margin-top: 15px;
+    padding: 17px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 15px 0 rgba(255, 172, 18, 0.281);
+}
+.mybutton:hover{
+    box-shadow: 0 10px 15px 0 rgba(255, 172, 18, 0.555);
+    transition: all 0.4s ease;
+}
+button:active{
+    padding: 10px 16px;
+    font-size: 17px;
+}
+
+#about{
+    height: 100vh;
+}
+.about-container{
+    max-width: var(--site-max-width);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.studio-img{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 8px;
+}
+.studio-img .studio-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+.myh3{
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-weight: 660;
+}
+.about-text{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(31, 31, 31);
+}
+
+.gallery{
+    position: relative;
+    overflow-x: hidden;
+}
+.gallery .section-container{
+    width: 100%;  
+    background: url(./Img/photocollection.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 160vh;
+    overflow: hidden;
+}
+.gallery::before{
+    content: '';
+    width: 100%;
+    height: 160vh;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: absolute;
+}
+.gallery-container{
+    max-width: var(--site-max-width);
+    margin: auto;
+    position: relative;
+    top: 8rem;
+    padding: 20px;
+}
+.my33{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    top: -40px;
+}
+.my33::before{
+    content: '';
+    width: 200px;
+    height: 20%;
+    background: var(--secondary-color);
+    position: absolute;
+    top: 35px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 50%;
+}
+.gallery-item{
+    position: relative;
+    width: 260px;
+    height: 350px;
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.301);
+}
+.gallery-item .photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery .gallery-container .gallery-row{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   width: 100%;
+   gap: 40px;
+   padding: 15px;
+   position: relative;
+}
+.gallery .gallery-container .row .gallery-filter {
+    background-color: var(--Bg-color--);
+    padding: 8px 15px;
+    max-width: var(--site-max-width);
+    text-align: left;
+    margin-bottom: 20px;
+}
+.gallery .gallery-filter .filter-item{
+     color: var(--black-color);
+     font-size: 18px;
+     margin: 0 10px;
+     font-weight: 500;
+     display: inline-block;
+     cursor: pointer;
+     border-bottom: 2px solid transparent
+}
+.gallery .gallery-filter .filter-item.active{
+    color: var(--black-color);
+    border-color: var(--secondary-color);
+}
+
+.gallery .gallery-item.show{
+    transition: all 0.3s ease-in;
+}
+.gallery .gallery-item.hide{
+    display: none;
+}
+
+.team{
+    min-height: 100vh;
+}
+.our-team{
+    text-align: center;
+    color: var(--black-color);
+    font-size: 24px;
+    font-weight: 660;
+    position: relative;
+    top: 5rem;
+    margin-bottom: 5%;
+}
+.our-team::before{
+    content: '';
+    width: 100px;
+    height: 17%;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: 46%;
+}
+.team .team-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 7rem;
+    margin-top: 8rem;
+}
+.team-img{
+   position: relative;
+   width: 280px;
+   height: 320px;
+   text-align: center;
+   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.308);
+}
+.team-img .member-photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-desc{
+    background-color: white;
+    padding: 20px;
+    margin-top: -5px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.144);
+}
+.myh44{
+    font-size: 17px;
+    font-weight: 550;
+    margin-bottom: 5px;
+}
+.profestion{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(83, 83, 83);
+}
+
+.contact{
+    height: 130vh;
+  
+}
+.contact-container-1{
+    text-align: center;
+}
+.contact-us{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 660;
+    position: relative;
+    z-index: 1;
+    top: 100px; 
+}
+.contact-us::after{
+    content: '';
+    width: 100px;
+    height: 17%;
+    background: var(--secondary-color);
+    position: absolute;
+    top: 30px;
+    left: 46.6%;
+    border-radius: 50%;
+}
+.containe-all-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    background: url(./Img/worldmap.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    max-width: 100%;
+    height: 170vh;
+    top: -15px;
+    flex-wrap: wrap;
+}
+.containe-all-info::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 170vh;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    position: relative;
+    top: 30px;
+    width: 45%;
+    min-height: 40vh;
+    row-gap: 20px;
+    padding: 15px;
+}
+.bxs-map, .bxs-phone-call, .bx-envelope{
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+.address, .call-us, .email-us{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.location, .phone, .email{
+    margin: 15px 0;
+}
+.city-name, .phone-number, .our-email{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+}
+.contact-container .message-us{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+input, textarea{
+    margin: 10px 0;
+    padding: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+}
+.send-message{
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 10px 15px 0 rgba(255, 172, 18, 0.459);
+}
+.send-message:hover{
+    box-shadow: 0 10px 15px 0 rgba(255, 172, 18, 0.692);
+}
+.map{
+    position: relative;
+    top: -9rem;
+}
+
+.footer{
+    background-color: rgb(22, 26, 59);
+    position: relative;
+    bottom: -16.2rem;
+    padding: 20px;
+}
+.footer-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.next-text,.usefull-links-text,.contact-f-text,.social-links-text{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+.next-span{
+    font-weight: 500;
+}
+.next-desc{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+.usefull-links{
+    display: flex;
+    flex-direction: column;
+}
+.usefull-links a{
+    color: white;
+    margin: 5px 0;
+    font-weight: 500; 
+}
+
+.footer-map, .contact-phone, .work-time{
+   display: flex;    
+}
+.footer .footer-container .footer-map .bxs-map{
+    font-size: 25px;
+    color: white;
+}
+.footer .footer-container .contact-phone .bxs-phone-call{
+    font-size: 25px;
+    color: white;
+}
+.bx-time{
+    font-size: 25px;
+    color: white;
+}
+.f-map-text, .amanis-phone, .work-time-text{
+    color: white;
+    font-weight: 500;
+    margin-left: 7px;
+}
+.social-links{
+    display: flex;
+    flex-direction: column;
+}
+.social-links a{
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.footer .footer-container .social-links a:hover{
+    font-size: 25px;
+    transition: all 0.4s ease-in;
+}
+
+
+.hidden{
+    opacity: 0;
+    transition: all 1.3s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+ }
+.hidden2{
+    opacity: 0;
+    transition: all 1.3s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+
+.team-container{
+    display: flex;
+}
+.team-img:nth-child(1){ 
+    transition-delay: 200ms;
+}
+.team-img:nth-child(2){ 
+    transition-delay: 400ms;
+}
+.team-img:nth-child(3){ 
+    transition-delay: 600ms;
+}
+
+.gallery-row{
+    display: flex;
+}
+.gallery-item:nth-child(1){
+    transition-delay: 200ms;
+}
+.gallery-item:nth-child(2){
+    transition-delay: 600ms;
+}
+.gallery-item:nth-child(3){
+    transition-delay: 200ms;
+}
+.gallery-item:nth-child(4){
+    transition-delay: 600ms;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+ }
+ 
+@media screen and (max-width: 1200px) {
+    html {overflow-x: hidden;}
+    
+    .section-container{
+        max-width: 80%;
+    }
+    .containe-home::before{
+        width: 100%;
+        height: 20vh;
+        left: -5px;
+        top: 30%;
+    }
+    .containe-home{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    .camera-container{
+        width: 240px;
+        height: 240px;
+        top: 170px;
+    }
+    .mybutton{
+        padding: 20px 25px;
+        font-size: 18px;
+    }
+    .battery{
+        display: none;
+    }
+    .about-container{
+        max-width: 100%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .studio-img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .about-text{
+        font-size: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .gallery .gallery-container .gallery-row{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+     }
+     .gallery .section-container::before{
+        max-width: 100%;
+        height: 135vh;
+        overflow: hidden;
+      }
+     .team .team-container{
+        gap: 9rem;
+    }
+      .our-team::before{
+        right: 45%;
+    }
+    .contact-container{
+        width: 75%;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+    .contact-us::after{
+        left: 45%;
+    }
+    .section-container, .footer-container{
+        padding: 5px;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 100%;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    html {overflow-x: hidden;}
+    .section-container{
+        max-width: 80%;
+    }
+    nav{
+        padding: 0 24px;
+    }
+    nav ul  {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+    .open-menu-list{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        padding: 8px 12px;
+        width: 100%;
+        margin: 24px auto;
+    }
+    nav ul li a{
+        color: var(--black-color);
+    }
+    .menu .open-btn{
+        display: block;
+    }
+    .menu .open-btn.hide{
+        display: none;
+    }
+    .containe-home::before{
+        width: 100%;
+        height: 20vh;
+        left: -5px;
+        top: 23%;
+    }
+    .containe-home{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    .camera-container{
+        width: 240px;
+        height: 240px;
+        top: 140px;
+    }
+    .mybutton{
+        padding: 15px 25px;
+        font-size: 18px;
+    }
+    .battery{
+        display: none;
+    }
+    .about-container{
+        max-width: 100%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .studio-img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .about-text{
+        font-size: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .gallery .gallery-container .gallery-row{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+     }
+     .gallery .section-container::before{
+        max-width: 100%;
+        height: 170vh;
+        overflow: hidden;
+      }
+     .team .team-container{
+        gap: 9rem;
+    }
+      .our-team::before{
+        right: 45%;
+    }
+    .contact-container{
+        width: 75%;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+    .contact-us::after{
+        left: 45%;
+    }
+    .section-container, .footer-container{
+        padding: 5px;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    html {overflow-x: hidden;}
+    .section-container{
+        max-width: 80%;
+    }
+    nav{
+        padding: 0 24px;
+    }
+    nav ul  {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+    .open-menu-list{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        padding: 8px 12px;
+        width: 100%;
+        margin: 24px auto;
+    }
+    .menu .open-btn{
+        display: block;
+    }
+    .menu .open-btn.hide{
+        display: none;
+    }
+    .containe-home{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    .camera-container{
+        width: 240px;
+        height: 240px;
+        top: 170px;
+    }
+    .mybutton{
+        padding: 15px 25px;
+        font-size: 18px;
+    }
+    .battery{
+        display: none;
+    }
+    .about-container{
+        max-width: 100%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .studio-img{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .about-text{
+        font-size: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .gallery .gallery-container .gallery-row{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+     }
+     .gallery::before{
+        max-width: 100%;
+        min-height: 140vh;
+        overflow: hidden;
+      }
+      .team .team-container{
+        gap: 9rem;
+    }
+      .our-team::before{
+        right: 42%;
+    }
+    .contact-container{
+        width: 75%;
+        margin-top: 7rem;
+        margin-bottom: 5rem;
+    }
+    .contact-us::after{
+        left: 43%;
+    }
+    .section-container, .footer-container{
+        padding: 5px;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    html {overflow-x: hidden;}
+    .section-container{
+        max-width: 80%;
+    }
+    header{
+        max-width: 100%;
+    }
+    nav ul li a{
+        max-width: 100%;
+    }
+    .containe-home::before{
+        width: 100%;
+        height: 13vh;
+        left: -5px;
+        top: 27%;
+    }
+    .containe-home{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    .camera-container{
+        width: 160px;
+        height: 160px;
+        top: 75%;
+        left: -10px;
+    }
+    .myh2{
+        font-size: 50px;
+    }
+    .text-p{
+        font-size: 17px;
+    }
+    .mybutton{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    .battery{
+        display: none;
+    }
+    .about-container{
+        max-width: 100%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .studio-img{
+        max-width: 250px;
+        max-height: 250px;
+    }
+    .about-text{
+        font-size: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .my33{
+        font-size: 22px;
+    }
+    .gallery .gallery-container .gallery-row{
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+        justify-items: center;
+     }
+    .gallery::before{
+        max-width: 100%;
+        min-height: 370vh;
+        overflow: hidden;
+      }
+    .team .team-container{
+        gap: 9rem;
+      }
+    .our-team::before{
+        right: 37%;
+        left: 38%;
+        top: 30px;
+    }
+    .contact-container{
+        width: 75%;
+        margin-top: 7rem;
+    }
+    .contact-us::after{
+        left: 38%;
+        top: 30px;
+    }
+    .section-container, .footer-container{
+        padding: 5px;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 100%;
+    }
+}
